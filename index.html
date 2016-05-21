@@ -33,47 +33,8 @@
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Upload Submissions</h3>
 
 <p>Upload your final submission before September 13th 11:59 PM EST.</p>
-
-<link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
-<form id="gform" method="POST"
-  action= "https://script.google.com/macros/s/AKfycbzJhFBWSEHNbuTbtmopyi94iNxsy-KTGj9O19SeBfig-jlDnbw/exec">
-  
-  <label for="name">Name: </label>
-  <input id="name" name="name" placeholder="First Last" />
-  <br>
-
-  <label for="grade">Grade: </label>
-  <input id="grade" grade="grade" placeholder="Input a number 9-12" />
-  <br>
-
-  <label for="email">Email: </label>
-  <input id="email" email="email" placeholder="Email" />
-  <br>
-
-  <label for="school">School: </label>
-  <input id="school" name="school" placeholder="School" />
-  <br>
-
-  <label for="file">Upload Submission: </label>
-  <br>
-  <input type="file" name="myFile">
-  <br>
-  <input type="submit" value="Upload Submission" 
-         onclick="this.value='Uploading..';
-                  google.script.run.withSuccessHandler(fileUploaded)
-                  .uploadFiles(this.parentNode);
-                  return false;">
-</form>
-    <!-- Customise the Thankyou Message People See when they submit the form: -->
-    <div style="display:none;" id="thankyou_message">
-      <h2><em>Thanks</em> for contacting us!
-        We will get back to you soon!</h2>
-    </div>
-    
-    <!-- Submit the Form to Google Using "AJAX" -->
-      <script data-cfasync="false" type="text/javascript"
-      src="/form-submission-handler.js"></script>
 <br>
+<p style="color:blue;">Submit here <a href="https://script.google.com/macros/s/AKfycbzJhFBWSEHNbuTbtmopyi94iNxsy-KTGj9O19SeBfig-jlDnbw/exec"></a></p>
 
 
 
@@ -89,6 +50,6 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-
+    <script src="form-submission-handler.js"></script>
   </body>
 </html>
