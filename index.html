@@ -35,6 +35,37 @@
 <p>Upload your final submission before September 13th 11:59 PM EST.</p>
 <p style="color:blue;"><a href="https://script.google.com/macros/s/AKfycbwQL0bDYe6Cm0GAbwrASM5O8JmRiL-ZR8fkvVBX-7sNSXe0iMc/exec" target="_blank"> Submit here </a></p>
 
+<form id="gform" method="POST"
+  action= "https://script.google.com/macros/s/AKfycbzJhFBWSEHNbuTbtmopyi94iNxsy-KTGj9O19SeBfig-jlDnbw/exec"
+  
+  <label for="name">Name: </label>
+  <input id="name" name="name" placeholder="First Last" />
+  <br>
+
+  <label for="grade">Grade: </label>
+  <input id="grade" grade="grade" placeholder="Input a number 9-12" />
+  <br>
+
+  <label for="email">Email: </label>
+  <input id="email" email="email" placeholder="Email" />
+  <br>
+
+  <label for="school">School: </label>
+  <input id="school" name="school" placeholder="School" />
+  <br>
+
+  <label for="file">Upload Submission: </label>
+  <br>
+  <input type="file" name="myFile">
+  <br>
+  <input type="submit" value="Upload Submission" 
+         onclick="this.value='Uploading..';
+                  google.script.run.withSuccessHandler(fileUploaded)
+                  .uploadFiles(this.parentNode);
+                  return false;">
+</form>
+<br>
+
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Have Questions?</h3>
 
