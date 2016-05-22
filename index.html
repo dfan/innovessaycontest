@@ -35,8 +35,7 @@
 <p>Upload your final submission before September 13th 11:59 PM EST.</p>
 <p style="color:blue;"><a href="https://script.google.com/macros/s/AKfycbwQL0bDYe6Cm0GAbwrASM5O8JmRiL-ZR8fkvVBX-7sNSXe0iMc/exec" target="_blank"> Submit here </a></p>
 
-<form id="gform" method="POST"
-  action= "https://script.google.com/macros/s/AKfycbzJhFBWSEHNbuTbtmopyi94iNxsy-KTGj9O19SeBfig-jlDnbw/exec"
+<form id="gform" method="POST" action= "https://script.google.com/macros/s/AKfycbzJhFBWSEHNbuTbtmopyi94iNxsy-KTGj9O19SeBfig-jlDnbw/exec">
   
   <label for="name">Name: </label>
   <input id="name" name="name" placeholder="First Last" />
@@ -58,12 +57,14 @@
   <br>
   <input type="file" name="myFile">
   <br>
-  <input type="submit" value="Upload Submission" 
-         onclick="this.value='Uploading..';
-                  google.script.run.withSuccessHandler(fileUploaded)
-                  .uploadFiles(this.parentNode);
-                  return false;">
+  <input type="submit" value="Upload Submission" />
+                  
 </form>
+
+<div style="display:none;" id="thankyou_message">
+  <h2><em>Thanks</em> for contacting us! We will get back to you soon!</h2>
+</div>
+
 <br>
 
 <h3>
@@ -78,6 +79,8 @@
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    <script src="form-submission-handler.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src='google-sheet.js'></script>
   </body>
 </html>
